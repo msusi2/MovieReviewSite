@@ -12,16 +12,11 @@ $('#moviesCon img').on('click', function() {
 		currentVid = this.id;
    console.log(this.id);
 
-
 $.getJSON('admin/ajaxQuery.php', {movies_id : currentVid}, function(data) {
-		console.log(data);
-    console.log('function working');
+	console.log(data);
+	//$('#mainVideo').attr('src', "images/trailers/" + data.movies_trailer);
+});
 
-		//$('#mainVideo').attr('src', "images/trailers/" + data.movies_trailer);
-		//$('#categories li a').addClass('nonActive');
-		//$('#'+data.movies_id).parent().removeClass('nonActive');
-
-	});
 });
 
 })();

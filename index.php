@@ -101,7 +101,7 @@ include('includes/nav.php');
 		echo "<p>{$getMovies}</p>";
 	}
 
-?>
+?>     
 
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
