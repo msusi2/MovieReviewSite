@@ -14,7 +14,7 @@ $('#moviesCon img').on('click', function() {
 
 $.getJSON('admin/ajaxQuery.php', {movies_id : currentVid}, function(data) {
 	console.log(data);
-	//$('#mainVideo').attr('src', "images/trailers/" + data.movies_trailer);
+	$('#mainVideo').attr('src', "images/trailers/" + data.movies_trailer);
 });
 
 });
