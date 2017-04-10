@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 <div class="row">
@@ -23,3 +24,22 @@
   <li><a href="index.php?filter=horror">Horror</a></li>
   <li><a href="index.php">All</a></li>
 </ul> -->
+=======
+<div class="col-md-6 col-md-offset-2">
+  <nav class="navbar navbar-default navbar-inverse">
+    <div class="container">
+			<div class="row">
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Horror</a></li>
+						<li><a href="#">Family</a></li>
+						<li><a href="#">Comedy</a></li>
+						<li><a href="#">Action</a></li>
+						<li><a href="#">Drama</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+</div>
+>>>>>>> 105d447c721126c1d63f06040934c6dc26e82680

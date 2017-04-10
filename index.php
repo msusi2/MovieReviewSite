@@ -1,9 +1,8 @@
 <?php
-
 	ini_set('display_errors',1);
-    error_reporting(E_ALL);
+  error_reporting(E_ALL);
 
-	require_once('admin/phpscripts/init.php');
+	require_once('phpscripts/init.php');
 
 	if(isset($_GET['filter'])) {
 		$tbl1 = "tbl_movies";
@@ -18,20 +17,18 @@
 		$tbl = "tbl_movies";
 		$getMovies = getAll($tbl);
 	}
-
 ?>
+
 <!doctype html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="">
-	<meta name="author" content="">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
 <title>Movie Review Site</title>
-<!-- Bootstrap Core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<!-- Custom Fonts -->
 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7cOpen+Sans+Condensed:300%7cRaleway" rel="stylesheet" type="text/css">
 <link href="css/main.css" rel="stylesheet" type="text/css">
@@ -67,6 +64,7 @@ include('includes/nav.php');
 			</video>
 		</div>
 
+<<<<<<< HEAD
 		<div class="col-md-12">
 			<h3>Post A Comment:</h3>
 			<form action="index.php" method="post" id="commentBox">
@@ -89,6 +87,8 @@ include('includes/nav.php');
 <!--<video controls><source src=\"images/trailers/{$row['movies_trailer']}\" type=\"video/mp4\"></video>-->
 <?php
 
+=======
+>>>>>>> 105d447c721126c1d63f06040934c6dc26e82680
 	if(!is_string($getMovies)){
 		while($row = mysqli_fetch_array($getMovies)){
 			echo "<div id=\"moviesCon\">
@@ -103,11 +103,38 @@ include('includes/nav.php');
 
 ?>     
 
+<<<<<<< HEAD
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
 
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
  <script src="js/main.js"></script>
+=======
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Bodzee $ Sus Films</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Horror</a></li>
+        <li><a href="#">Family</a></li>
+       	<li><a href="#">Comedy</a></li>
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Drama</a></li>
+			</ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+>>>>>>> 105d447c721126c1d63f06040934c6dc26e82680
 </body>
 </html>

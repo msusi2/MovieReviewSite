@@ -1,5 +1,5 @@
 <?php
-	include 'phpscripts/connect.php';
+	include 'admin/phpscripts/connect.php';
 
 	$link->set_charset("utf8");
 
