@@ -1,9 +1,9 @@
 <?php
 
 	ini_set('display_errors',1);
-    error_reporting(E_ALL);
+  error_reporting(E_ALL);
 
-	require_once('admin/phpscripts/init.php');
+	require_once('phpscripts/init.php');
 
 	if(isset($_GET['filter'])) {
 		$tbl1 = "tbl_movies";
@@ -23,11 +23,11 @@
 <!doctype html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="">
-	<meta name="author" content="">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
 <title>Movie Review Site</title>
 <!-- Bootstrap Core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
@@ -39,7 +39,7 @@
 <body>
 <?php
 
-	include('includes/nav.html');
+	include 'includes/nav.php';
 
 	if(!is_string($getMovies)){
 		while($row = mysqli_fetch_array($getMovies)){
@@ -52,7 +52,7 @@
 		echo "<p>{$getMovies}</p>";
 	}
 
-	include('includes/footer.html');
+	include 'includes/footer.php';
 
 ?>
 </body>

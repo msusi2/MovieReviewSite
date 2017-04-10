@@ -1,8 +1,17 @@
-<h2>This content could be your nav</h2>
-<ul class="filterNav">
-<li><a href="index.php?filter=action">Action</a></li>
-<li><a href="index.php?filter=comedy">Comedy</a></li>
-<li><a href="index.php?filter=family">Family</a></li>
-<li><a href="index.php?filter=horror">Horror</a></li>
-<li><a href="index.php">All</a></li>
-</ul>
+<div class="col-md-6 col-md-offset-2">
+  <nav class="navbar navbar-default navbar-inverse">
+    <div class="container">
+			<div class="row">
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="#">Horror</a></li>
+						<li><a href="#">Family</a></li>
+						<li><a href="#">Comedy</a></li>
+						<li><a href="#">Action</a></li>
+						<li><a href="#">Drama</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+</div>
