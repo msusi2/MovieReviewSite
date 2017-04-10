@@ -1,1 +1,43 @@
 /*CSS STYLES*/
+
+#categories li {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.8em;
+  text-decoration: underline;
+  color: blue;
+}
+
+#categories {
+  text-align: center;
+  margin-top: 10px;
+}
+
+body {
+  display: block;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+
+#searchBar {
+    display: block;
+    margin: 0 auto;
+    position: fixed;
+    right: 0;
+    width: 250px;
+}
+.stylish-input-group .input-group-addon{
+    background: white !important;
+}
+.stylish-input-group .form-control{
+
+}
+.stylish-input-group button{
+    border:0;
+    background:transparent;
+}
+
+#mainVideo {
+  border: solid 1px black;
+}
