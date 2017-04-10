@@ -29,17 +29,38 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <title>Movie Review Site</title>
-<!-- Bootstrap Core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<!-- Custom Fonts -->
 <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7cOpen+Sans+Condensed:300%7cRaleway" rel="stylesheet" type="text/css">
 <link href="css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<?php
 
-	include 'includes/nav.php';
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Bodzee $ Sus Films</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#">Horror</a></li>
+        <li><a href="#">Family</a></li>
+       	<li><a href="#">Comedy</a></li>
+        <li><a href="#">Action</a></li>
+        <li><a href="#">Drama</a></li>
+			</ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<?php
 
 	if(!is_string($getMovies)){
 		while($row = mysqli_fetch_array($getMovies)){
@@ -51,8 +72,6 @@
 	}else{
 		echo "<p>{$getMovies}</p>";
 	}
-
-	include 'includes/footer.php';
 
 ?>
 </body>
