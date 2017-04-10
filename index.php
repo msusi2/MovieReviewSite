@@ -60,9 +60,9 @@ include('includes/nav.php');
 	<section class="row" id="vidCon">
 		<div class="col-md-12">
 			<h2>Featured Video</h2>
-			<video id="mainVideo" controls>
-				<source src="images/trailers/meatballs.mp4" type="video/mp4">
-					Please update broswer.
+			<video controls>
+				<source src="images/trailers/meatballs.mp4" type="video/mp4" id="mainVideo">
+					Your browser does not support Video. Please consider using Chrome or Firefox.
 			</video>
 		</div>
 
