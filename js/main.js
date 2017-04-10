@@ -2,19 +2,23 @@
 	"use strict";
 
 var catCon = document.querySelector("#categoryCon");
-var cats = document.querySelectorAll('#categoryCon li');
+var cats = document.querySelectorAll('#categoryCon li a');
 var currentCat = 1;
 
-//console.log(thumbnails.length);
+console.log('working');
+console.log(cats.length);
 
-$('#catCon li').on('click', function() {
+$('#categoryCon li a').on('click', function() {
 		currentCat = this.id;
+    console.log(this.id)
 
-	$.getJSON('js/ajaxQuery.php', {movies_id : currentCat}, function(data) {
+
+	$.getJSON('phpscripts/ajaxQuery.php', {movies_id : currentCat}, function(data) {
 		console.log(data);
+    console.log('function');
 
 		$('#mainVideo').attr('src',"images/trailers/" + data.movies_trailer);
-		$('#catCon div').addClass('nonActive');
+		$('#categoryCon div').addClass('nonActive');
 		$('#'+data.movies_id).parent().removeClass('nonActive');
 
 	});

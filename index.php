@@ -47,10 +47,10 @@ include('includes/nav.php');
 	<section class="row" id="categoryCon">
 		<div class="col-md-12">
 			<ul class="list-unstyled" id="categories">
-				<li>Horror</li>
-				<li>Comedy</li>
-				<li>Family</li>
-				<li>Action</li>
+				<li><a href="#" id="horror">Horror</a></li>
+				<li><a href="#" id="comedy">Comedy</a></li>
+				<li><a href="#" id="family">Family</a></li>
+				<li><a href="#" id="action">Action</a></li>
 			</ul>
 		</div>
 	</section>
