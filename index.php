@@ -41,17 +41,29 @@ include('includes/nav.php');
 
 	<h1 class="text-center">Choose A Category:</h1>
 
-	<section class="row" id="categoryCon">
-		<div class="col-md-12">
-			<ul class="list-unstyled" id="categories">
-				<li><a href="index.php?filter=action" id="Action" class="movieType">Action</a></li>
-				<li><a href="index.php?filter=comedy" id="Comedy" class="movieType">Comedy</a></li>
-				<li><a href="index.php?filter=family" id="Family" class="movieType">Family</a></li>
-				<li><a href="index.php?filter=horror" id="Horror" class="movieType">Horror</a></li>
-				<li><a href="index.php">All</a></li>
-			</ul>
-		</div>
-	</section>
+	<nav class="navbar navbar-default" role="navigation">
+	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	      <a class="navbar-brand" href="#">Bodzee $ Sus Films</a>
+	    </div>
+
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      <ul class="nav navbar-nav">
+	        <li><a href="#">Action</a></li>
+	        <li><a href="#">Comedy</a></li>
+	       	<li><a href="#">Family</a></li>
+	        <li><a href="#">Horror</a></li>
+	        <li><a href="#">All</a></li>
+				</ul>
+	    </div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
 
 <div class="container text-center">
 
@@ -64,7 +76,6 @@ include('includes/nav.php');
 			</video>
 		</div>
 
-<<<<<<< HEAD
 		<div class="col-md-12">
 			<h3>Post A Comment:</h3>
 			<form action="index.php" method="post" id="commentBox">
@@ -87,8 +98,6 @@ include('includes/nav.php');
 <!--<video controls><source src=\"images/trailers/{$row['movies_trailer']}\" type=\"video/mp4\"></video>-->
 <?php
 
-=======
->>>>>>> 105d447c721126c1d63f06040934c6dc26e82680
 	if(!is_string($getMovies)){
 		while($row = mysqli_fetch_array($getMovies)){
 			echo "<div id=\"moviesCon\">
@@ -103,38 +112,11 @@ include('includes/nav.php');
 
 ?>
 
-<<<<<<< HEAD
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
-
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
- <script src="js/main.js"></script>
-=======
-<nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Bodzee $ Sus Films</a>
-    </div>
+<script src="js/main.js"></script>
 
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li><a href="#">Horror</a></li>
-        <li><a href="#">Family</a></li>
-       	<li><a href="#">Comedy</a></li>
-        <li><a href="#">Action</a></li>
-        <li><a href="#">Drama</a></li>
-			</ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
->>>>>>> 105d447c721126c1d63f06040934c6dc26e82680
 </body>
 </html>
