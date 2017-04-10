@@ -1,5 +1,4 @@
 <?php
-
 	ini_set('display_errors',1);
   error_reporting(E_ALL);
 
@@ -18,8 +17,8 @@
 		$tbl = "tbl_movies";
 		$getMovies = getAll($tbl);
 	}
-
 ?>
+
 <!doctype html>
 <html>
 <head>
