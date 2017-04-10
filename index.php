@@ -2,7 +2,7 @@
 	ini_set('display_errors',1);
   error_reporting(E_ALL);
 
-	require_once('phpscripts/init.php');
+	require_once 'admin/phpscripts/init.php';
 
 	if(isset($_GET['filter'])) {
 		$tbl1 = "tbl_movies";
@@ -34,10 +34,6 @@
 <link href="css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-
-<?php
-include('includes/nav.php');
-?>
 
 	<h1 class="text-center">Choose A Category:</h1>
 
