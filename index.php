@@ -3,7 +3,7 @@
 	ini_set('display_errors',1);
     error_reporting(E_ALL);
 
-	require_once('phpscripts/init.php');
+	require_once('admin/phpscripts/init.php');
 
 	if(isset($_GET['filter'])) {
 		$tbl1 = "tbl_movies";
@@ -47,10 +47,11 @@ include('includes/nav.php');
 	<section class="row" id="categoryCon">
 		<div class="col-md-12">
 			<ul class="list-unstyled" id="categories">
-				<li><a href="#" id="horror">Horror</a></li>
-				<li><a href="#" id="comedy">Comedy</a></li>
-				<li><a href="#" id="family">Family</a></li>
-				<li><a href="#" id="action">Action</a></li>
+				<li><a href="index.php?filter=action" id="Action" class="movieType">Action</a></li>
+				<li><a href="index.php?filter=comedy" id="Comedy" class="movieType">Comedy</a></li>
+				<li><a href="index.php?filter=family" id="Family" class="movieType">Family</a></li>
+				<li><a href="index.php?filter=horror" id="Horror" class="movieType">Horror</a></li>
+				<li><a href="index.php">All</a></li>
 			</ul>
 		</div>
 	</section>
@@ -60,8 +61,8 @@ include('includes/nav.php');
 	<section class="row" id="vidCon">
 		<div class="col-md-12">
 			<h2>Featured Video</h2>
-			<video controls>
-				<source src="images/trailers/meatballs.mp4" type="video/mp4" id="mainVideo">
+			<video controls id="mainVideo">
+				<source src="images/trailers/meatballs.mp4" type="video/mp4">
 					Your browser does not support Video. Please consider using Chrome or Firefox.
 			</video>
 		</div>
@@ -77,38 +78,28 @@ include('includes/nav.php');
 				<label for="message">Comment:</label>
 <textarea class="form-control text-center" id="message" name="poster_comment" placeholder="What did you think?" maxlength="140" rows="7"></textarea>
 				</div>
+				<input id="submit" type="submit" value="Post Comment" class="btn">
 			</form>
 		</div>
 	</section>
 
-
-
 </div>
 
+<br>
+<!--<video controls><source src=\"images/trailers/{$row['movies_trailer']}\" type=\"video/mp4\"></video>-->
 <?php
-
-
-	//include('includes/nav.php');
-
-/*
-
 
 	if(!is_string($getMovies)){
 		while($row = mysqli_fetch_array($getMovies)){
-			echo "<img src=\"images/{$row['movies_thumb']}\" alt=\"{$row['movies_title']}\">
+			echo "<div id=\"moviesCon\">
+			<img src=\"images/{$row['movies_thumb']}\" alt=\"{$row['movies_title']}\" id=\"{$row['movies_id']}\">
 				 <h2>{$row['movies_title']}</h2>
 				 <p>{$row['movies_year']}</p><br>
-				 <a href=\"details.php?id={$row['movies_id']}\">More...</a><br><br>";
+				 </div>";
 		}
 	}else{
 		echo "<p>{$getMovies}</p>";
 	}
-
-//<footer>
-	//include('includes/footer.php');
-	//</footer>
-
-	*/
 
 ?>
 
