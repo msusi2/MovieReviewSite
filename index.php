@@ -44,14 +44,13 @@ include('includes/nav.php');
 
 	<h1 class="text-center">Choose A Category:</h1>
 
-	<section class="row">
+	<section class="row" id="categoryCon">
 		<div class="col-md-12">
 			<ul class="list-unstyled" id="categories">
 				<li>Horror</li>
 				<li>Comedy</li>
 				<li>Family</li>
 				<li>Action</li>
-				<li>Drama</li>
 			</ul>
 		</div>
 	</section>

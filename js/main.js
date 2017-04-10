@@ -1,22 +1,21 @@
-$(document).foundation();
 (function() {
 	"use strict";
 
-var thumbCon = document.querySelector("#thumbCon");
-var thumbs = document.querySelectorAll('#thumbCon img');
-var currentVideo = 1;
+var catCon = document.querySelector("#categoryCon");
+var cats = document.querySelectorAll('#categoryCon li');
+var currentCat = 1;
 
 //console.log(thumbnails.length);
 
-$('#thumbCon img').on('click', function() {
-		currentVideo = this.id;
+$('#catCon li').on('click', function() {
+		currentCat = this.id;
 
-	$.getJSON('js/ajaxQuery.php', {movies_id : currentVideo}, function(data) {
-		//console.log(data);
+	$.getJSON('js/ajaxQuery.php', {movies_id : currentCat}, function(data) {
+		console.log(data);
 
-		$('#mainVideo img').attr('src',"images/uploads/" + data.gallery_img);
-		$('#thumbnailCon div').addClass('nonActive');
-		$('#'+data.gallery_id).parent().removeClass('nonActive');
+		$('#mainVideo').attr('src',"images/trailers/" + data.movies_trailer);
+		$('#catCon div').addClass('nonActive');
+		$('#'+data.movies_id).parent().removeClass('nonActive');
 
 	});
 });

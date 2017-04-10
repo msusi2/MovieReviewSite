@@ -41,3 +41,8 @@ body {
 #mainVideo {
   border: solid 1px black;
 }
+
+
+.nonActive {
+  color: red;
+}
