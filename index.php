@@ -36,6 +36,19 @@
 </head>
 <body>
 
+<?php
+	if(!is_string($getMovies)){
+		while($row = mysqli_fetch_array($getMovies)){
+			echo "<img src=\"images/{$row['movies_thumb']}\" alt=\"{$row['movies_title']}\">
+				 <h2>{$row['movies_title']}</h2>
+				 <p>{$row['movies_year']}</p><br>
+				 <a href=\"details.php?id={$row['movies_id']}\">More...</a><br><br>";
+		}
+	}else{
+		echo "<p>{$getMovies}</p>";
+	}
+?>
+
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -60,19 +73,15 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<?php
+<div class="container">
+  <div class="row"><br>
+		<div class="jumbotron">
+      <h1>Jumbotron</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nunc est, tempus et venenatis id, ornare sed lorem.Curabitur sed ipsum et odio interdum pharetra nec sed libero. Sed velit massa, consectetur in mollis eget, elementum eu diam.</p>
+        <p><a class="btn btn-primary btn-lg">Learn more</a></p>
+    </div>
+	</div>
+</div>
 
-	if(!is_string($getMovies)){
-		while($row = mysqli_fetch_array($getMovies)){
-			echo "<img src=\"images/{$row['movies_thumb']}\" alt=\"{$row['movies_title']}\">
-				 <h2>{$row['movies_title']}</h2>
-				 <p>{$row['movies_year']}</p><br>
-				 <a href=\"details.php?id={$row['movies_id']}\">More...</a><br><br>";
-		}
-	}else{
-		echo "<p>{$getMovies}</p>";
-	}
-
-?>
 </body>
 </html>
