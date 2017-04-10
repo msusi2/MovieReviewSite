@@ -60,7 +60,10 @@ include('includes/nav.php');
 	<section class="row" id="vidCon">
 		<div class="col-md-12">
 			<h2>Featured Video</h2>
-			<video id="mainVideo"></video>
+			<video id="mainVideo" controls>
+				<source src="images/trailers/meatballs.mp4" type="video/mp4">
+					Please update broswer.
+			</video>
 		</div>
 
 		<div class="col-md-12">
