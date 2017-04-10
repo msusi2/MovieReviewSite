@@ -35,6 +35,20 @@
 <link href="css/main.css" rel="stylesheet" type="text/css">
 </head>
 <body>
+<?php
+
+	if(!is_string($getMovies)){
+		while($row = mysqli_fetch_array($getMovies)){
+			echo "<img src=\"images/{$row['movies_thumb']}\" alt=\"{$row['movies_title']}\">
+				 <h2>{$row['movies_title']}</h2>
+				 <p>{$row['movies_year']}</p><br>
+				 <a href=\"details.php?id={$row['movies_id']}\">More...</a><br><br>";
+		}
+	}else{
+		echo "<p>{$getMovies}</p>";
+	}
+
+?>
 
 <nav class="navbar navbar-default" role="navigation">
   <div class="container-fluid">
@@ -60,19 +74,5 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<?php
-
-	if(!is_string($getMovies)){
-		while($row = mysqli_fetch_array($getMovies)){
-			echo "<img src=\"images/{$row['movies_thumb']}\" alt=\"{$row['movies_title']}\">
-				 <h2>{$row['movies_title']}</h2>
-				 <p>{$row['movies_year']}</p><br>
-				 <a href=\"details.php?id={$row['movies_id']}\">More...</a><br><br>";
-		}
-	}else{
-		echo "<p>{$getMovies}</p>";
-	}
-
-?>
 </body>
 </html>
