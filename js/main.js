@@ -15,7 +15,7 @@ $('#categoryCon li a').on('click', function() {
 
 	$.getJSON('phpscripts/ajaxQuery.php', {movies_id : currentCat}, function(data) {
 		console.log(data);
-    console.log('function');
+    console.log('function working');
 
 		$('#mainVideo').attr('src',"images/trailers/" + data.movies_trailer);
 		$('#categoryCon div').addClass('nonActive');

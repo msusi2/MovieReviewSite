@@ -87,10 +87,10 @@ include('includes/nav.php');
 
 	//include('includes/nav.php');
 
+/*
 
 
-
-	/*if(!is_string($getMovies)){
+	if(!is_string($getMovies)){
 		while($row = mysqli_fetch_array($getMovies)){
 			echo "<img src=\"images/{$row['movies_thumb']}\" alt=\"{$row['movies_title']}\">
 				 <h2>{$row['movies_title']}</h2>
@@ -99,11 +99,13 @@ include('includes/nav.php');
 		}
 	}else{
 		echo "<p>{$getMovies}</p>";
-	} */
+	}
 
 //<footer>
 	//include('includes/footer.php');
 	//</footer>
+
+	*/
 
 ?>
 

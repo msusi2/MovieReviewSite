@@ -1,11 +1,4 @@
-<!--<h2>This content could be your nav</h2>
-<ul class="filterNav">
-<li><a href="index.php?filter=action">Action</a></li>
-<li><a href="index.php?filter=comedy">Comedy</a></li>
-<li><a href="index.php?filter=family">Family</a></li>
-<li><a href="index.php?filter=horror">Horror</a></li>
-<li><a href="index.php">All</a></li>
-</ul> -->
+
 
 <div class="row">
         <div class="col-sm-6 col-sm-offset-3">
@@ -21,3 +14,12 @@
             </div>
         </div>
 	</div>
+
+
+  <!--<ul class="filterNav">
+  <li><a href="index.php?filter=action">Action</a></li>
+  <li><a href="index.php?filter=comedy">Comedy</a></li>
+  <li><a href="index.php?filter=family">Family</a></li>
+  <li><a href="index.php?filter=horror">Horror</a></li>
+  <li><a href="index.php">All</a></li>
+</ul> -->
