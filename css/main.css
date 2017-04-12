@@ -1,11 +1,20 @@
 /*CSS STYLES*/
 
+#postComment {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
 .status
 {
     width:350px;
     font-size: 13px;
     line-height: 18px;
     font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
 }
 .commentarea
 {
@@ -13,53 +22,29 @@
     font-size: 13px;
     line-height: 18px;
     font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
-    border: thin;
-    border-color: white;
-    border-style: solid;
+
     background-color: hsl(0, 0%, 96%);
     padding: 5px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 #comment
 {
     width: 357px;
     font-size: 15px;
     padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: solid 1px #efefef;
+
 }
 
+#commentbox {
 
-/*textarea
-{
-	width:500px;
-	height:100px;
-	border:1px solid silver;
-	border-radius:5px;
-	font-size:17px;
-	padding:10px;
-	font-family:helvetica;
 }
-input[type="text"]
-{
-	width:500px;
-	height:35px;
-	border:1px solid silver;
-	margin-top:10px;
-	border-radius:5px;
-	font-size:17px;
-	padding:10px;
-	font-family:helvetica;
-}
-input[type="submit"]
-{
-	width:150px;
-	height:40px;
-	border:none;
-	background-color:#2E64FE;
-	color: white;
-	margin-top:10px;
-	border-radius:5px;
-	font-size:17px;
-}
-*/
 
 
 #categories li {
@@ -82,29 +67,36 @@ body {
 }
 
 
-#searchBar {
-    display: block;
-    margin: 0 auto;
-    position: fixed;
-    right: 0;
-    width: 250px;
-}
-.stylish-input-group .input-group-addon{
-    background: white !important;
-}
-.stylish-input-group .form-control{
-
-}
-.stylish-input-group button{
-    border:0;
-    background:transparent;
-}
-
 #mainVideo {
   border: solid 1px black;
 }
 
-
-.nonActive {
-  color: red;
+#content {
+    height: inherit;
+    width: 100%;
+    padding:20px;
+    box-sizing: border-box;
+}
+#content input {
+    width: 100%;
+    font-size:20px;
+    color: #424242;
+    padding:10px;
+    border-radius: 10px;
+    border: solid 1px #ccc;
+}
+#results{
+    width:100%;
+    display: none;
+    bordder-bottom:1px solid black;
+    bordder-left:1px solid black;
+    bordder-right:1px solid black;
+}
+#results #item {
+    box-sizing: border-box;
+    padding:10px;
+    font-size:18px;
+    width: 100%;
+    background: white;
+    border-bottom:1px solid #bdbdbd;
 }

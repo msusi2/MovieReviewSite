@@ -33,7 +33,6 @@
 <!-- Bootstrap Core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <!-- Custom Fonts -->
-<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800%7cOpen+Sans+Condensed:300%7cRaleway" rel="stylesheet" type="text/css">
 <link href="css/main.css" rel="stylesheet" type="text/css">
 </head>
@@ -57,34 +56,75 @@
 		</div>
 	</section>
 
+	<div id="main" class="text-center">
+		<div id="content">
+			<p>Or search our database for your favourite movie:</p>
+				<input type="search" name="keyword" placeholder="Search Movies" id="searchbox">
+				<div id="results"></div>
+		</div>
+	</div>
+
+
 <div class="container text-center">
 
 	<section class="row" id="vidCon">
 		<div class="col-md-12">
-			<h2>Featured Video</h2>
+			<h2>Featured Trailer:</h2>
 			<video controls id="mainVideo">
 				<source src="images/trailers/meatballs.mp4" type="video/mp4">
 					Your browser does not support Video. Please consider using Chrome or Firefox.
 			</video>
 		</div>
-
-		<!--<div class="col-md-12" id="addCommentContainer">
-			<h3>Post A Comment:</h3>
-			<form action="" method="post" id="commentBox">
-				<div class="form-group">
-				<label for="name">Name:</label>
-						<input type="text" class="form-control text-center" id="name" name="poster_name" placeholder="Enter Your Name">
-				</div>
-				<div class="form-group">
-				<label for="message">Comment:</label>
-<textarea class="form-control text-center" id="message" name="poster_comment" placeholder="What did you think?" maxlength="140" rows="7"></textarea>
-				</div>
-				<input id="submit" type="submit" value="Post Comment" class="btn">
-			</form>
-		</div>
 	</section>
 
-</div>-->
+
+	<section class="row" id="postComment">
+		<div class="col-md-12 text-center">
+			<h3>Already watched these movies?</h3>
+		<?php
+			ini_set('display_errors',1);
+		    error_reporting(E_ALL);
+
+			include 'admin/phpscripts/connect2.php';
+
+		if ($_POST)
+		{
+		    $sid = mysqli_real_escape_string($link,$_POST['sid']);
+		    $comment = mysqli_real_escape_string($link,$_POST['comment']);
+		    $strSQL_Result  = mysqli_query($link,"INSERT INTO tbl_comments VALUES(NULL,'{$sid}','{$comment}',NULL)");
+				exit;
+
+		}
+		$strSQL_Result  = mysqli_query($link,"SELECT id,status from tbl_status LIMIT 1");
+		$row            = mysqli_fetch_array($strSQL_Result);
+			//echo json_encode($row);
+		$sid         = $row['id'];
+		$status     = $row['status'];
+		$commentshow = "";
+		$strSQL_Comment     = mysqli_query($link,"SELECT id,comment,date_post from tbl_comments LIMIT 10");
+		while($rowcomm = mysqli_fetch_array($strSQL_Comment))
+		{
+		    $id             = $rowcomm['id'];
+		    $comment        = $rowcomm['comment'];
+				 $date        = $rowcomm['date_post'];
+		    $commentshow    .= "<div class='commentarea'>".$comment."<br>".$date."</div>";
+		}
+		?>
+
+		<?php
+		//add in name and time
+				 echo "<div class=\"status text-center col-md-12\">$status</div><br>";
+						echo "<div id=\"commentbox\">";
+						echo "$commentshow";
+						echo "</div>";
+						echo "<input type=\"hidden\" name=\"sid\" id=\"sid\" value=\"$sid\">";
+						echo "<input type=\"hidden\" name=\"date\" id=\"date\" value=\"$date\">";
+						echo "<input type=\"text\" name=\"comment\" id=\"comment\" placeholder=\"Write a comment....\" />";
+						//echo "<input class=\"btn btn-primary\" type=\"submit\" name=\"submit\" value=\"Post\">";
+		 ?>
+	 </div>
+ </section>
+
 
 
 
@@ -110,11 +150,74 @@
 </div>
 </section>
 
+</div>
+
 
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+function saveToDatabase(comment)
+    {
+        var select = comment;
+        select = $(this).serialize();
+        $('#comment').live("commentarea", function ()
+        {
+            // POST to database
+            $.ajax
+            ({
+                type: 'POST',
+                url: 'index.php',
+                data:{comment:comment}
+            }).then(function(data){alert(data)});
+        });
+    }
+
+$(document).ready(function() {
+$('#comment').keyup(function(e)
+    {
+        if(e.keyCode == 13)
+        {
+        var comment = $('#comment').val()
+				var date = $('#date').val()
+        var sid = $('#sid').val()
+            if(comment == "")
+            {
+                alert("Please write something in comment.");
+            }
+            else
+            {
+                $("#commentbox").append("<div class=\'commentarea\'>"+comment+"<br>"+date+"</div>");
+                $.post("index.php", {sid:sid,comment:comment,date:date},function(data)
+                {
+                })
+                $('#comment').val("");
+            }
+        }
+    });
+});
+</script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#searchbox").on('keyup',function () {
+            var key = $(this).val();
+
+            $.ajax({
+                url:'admin/searchQuery.php',
+                type:'GET',
+                data:'keyword='+key,
+                beforeSend:function () {
+                    $("#results").slideUp('fast');
+                },
+                success:function (data) {
+                    $("#results").html(data);
+                    $("#results").slideDown('fast');
+                }
+            });
+        });
+    });
+</script>
 <script src="js/main.js"></script>
 </body>
 </html>

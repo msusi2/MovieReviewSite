@@ -70,7 +70,7 @@ function saveToDatabase(comment)
         select = $(this).serialize();
         $('#comment').live("commentarea", function ()
         {
-            // POST to php script
+            // POST to database
             $.ajax
             ({
                 type: 'POST',
