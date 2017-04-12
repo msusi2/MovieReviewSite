@@ -23,12 +23,11 @@
 
 	include 'admin/phpscripts/connect2.php';
 
-	if($_POST)
+if ($_POST)
 {
     $sid = mysqli_real_escape_string($link,$_POST['sid']);
     $comment = mysqli_real_escape_string($link,$_POST['comment']);
-
-    $strSQL_Result  = "INSERT into tbl_comments(sid,comment) values(NULL,'$sid','$comment',CURRENT_TIMESTAMP)";  //figure out why DB is not updating
+    $strSQL_Result  = mysqli_query($link,"INSERT INTO tbl_comments VALUES(NULL,'{$sid}','{$comment}',NULL)");  //figure out why DB is not updating
 		exit;
 
 }
@@ -38,7 +37,7 @@ $row            = mysqli_fetch_array($strSQL_Result);
 $sid         = $row['id'];
 $status     = $row['status'];
 $commentshow = "";
-$strSQL_Comment     = mysqli_query($link,"SELECT id,comment from tbl_comments LIMIT 3");
+$strSQL_Comment     = mysqli_query($link,"SELECT id,comment,'date' from tbl_comments LIMIT 3");
 while($rowcomm = mysqli_fetch_array($strSQL_Comment))
 {
     $id             = $rowcomm['id'];
@@ -65,6 +64,22 @@ while($rowcomm = mysqli_fetch_array($strSQL_Comment))
 <!-- Bootstrap Core JavaScript -->
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript">
+function saveToDatabase(comment)
+    {
+        var select = comment;
+        select = $(this).serialize();
+        $('#comment').live("commentarea", function ()
+        {
+            // POST to php script
+            $.ajax
+            ({
+                type: 'POST',
+                url: 'comments.php',
+                data:{comment:comment}
+            }).then(function(data){alert(data)});
+        });
+    }
+
 $(document).ready(function() {
 $('#comment').keyup(function(e)
     {
@@ -88,6 +103,5 @@ $('#comment').keyup(function(e)
     });
 });
 </script>
-<script type="text/javascript" src="js/comments.js"></script>
 </body>
 </html>
