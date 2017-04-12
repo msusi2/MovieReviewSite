@@ -43,23 +43,6 @@
 //include('includes/nav.php');
 ?>
 
-<div class="row">
-        <div class="col-sm-6 col-sm-offset-3">
-            <div id="searchBar" class="search-box">
-                <div class="input-group stylish-input-group">
-                    <input type="text" class="form-control"  placeholder="Search" placeholder="Find Movies...">
-										<div class="result"></div>
-                    <span class="input-group-addon">
-                        <button type="submit">
-                            <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                    </span>
-                </div>
-            </div>
-        </div>
-	</div>
-
-
 	<h1 class="text-center">Choose A Category:</h1>
 
 	<section class="row" id="categoryCon">
@@ -85,7 +68,7 @@
 			</video>
 		</div>
 
-		<div class="col-md-12" id="addCommentContainer">
+		<!--<div class="col-md-12" id="addCommentContainer">
 			<h3>Post A Comment:</h3>
 			<form action="" method="post" id="commentBox">
 				<div class="form-group">
@@ -101,7 +84,7 @@
 		</div>
 	</section>
 
-</div>
+</div>-->
 
 
 
@@ -132,6 +115,6 @@
 <script src="js/jquery.js"></script>
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
- <script src="js/main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>

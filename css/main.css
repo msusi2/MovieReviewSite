@@ -1,5 +1,39 @@
 /*CSS STYLES*/
 
+textarea
+{
+	width:500px;
+	height:100px;
+	border:1px solid silver;
+	border-radius:5px;
+	font-size:17px;
+	padding:10px;
+	font-family:helvetica;
+}
+input[type="text"]
+{
+	width:500px;
+	height:35px;
+	border:1px solid silver;
+	margin-top:10px;
+	border-radius:5px;
+	font-size:17px;
+	padding:10px;
+	font-family:helvetica;
+}
+input[type="submit"]
+{
+	width:150px;
+	height:40px;
+	border:none;
+	background-color:#2E64FE;
+	color: white;
+	margin-top:10px;
+	border-radius:5px;
+	font-size:17px;
+}
+
+
 #categories li {
   display: inline-block;
   margin-right: 10px;
