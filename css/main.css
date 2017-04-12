@@ -1,6 +1,33 @@
 /*CSS STYLES*/
 
-textarea
+.status
+{
+    width:350px;
+    font-size: 13px;
+    line-height: 18px;
+    font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+}
+.commentarea
+{
+    width:350px;
+    font-size: 13px;
+    line-height: 18px;
+    font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+    border: thin;
+    border-color: white;
+    border-style: solid;
+    background-color: hsl(0, 0%, 96%);
+    padding: 5px;
+}
+#comment
+{
+    width: 357px;
+    font-size: 15px;
+    padding: 20px;
+}
+
+
+/*textarea
 {
 	width:500px;
 	height:100px;
@@ -32,6 +59,7 @@ input[type="submit"]
 	border-radius:5px;
 	font-size:17px;
 }
+*/
 
 
 #categories li {
