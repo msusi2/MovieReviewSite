@@ -29,6 +29,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 <title>Movie Review Site</title>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 <!-- Bootstrap Core CSS -->
 <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
 <!-- Custom Fonts -->
@@ -39,19 +40,36 @@
 <body>
 
 <?php
-include('includes/nav.php');
+//include('includes/nav.php');
 ?>
+
+<div class="row">
+        <div class="col-sm-6 col-sm-offset-3">
+            <div id="searchBar" class="search-box">
+                <div class="input-group stylish-input-group">
+                    <input type="text" class="form-control"  placeholder="Search" placeholder="Find Movies...">
+										<div class="result"></div>
+                    <span class="input-group-addon">
+                        <button type="submit">
+                            <span class="glyphicon glyphicon-search"></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+	</div>
+
 
 	<h1 class="text-center">Choose A Category:</h1>
 
 	<section class="row" id="categoryCon">
 		<div class="col-md-12">
 			<ul class="list-unstyled" id="categories">
-				<li><a href="index.php?filter=action" id="Action" class="movieType">Action</a></li>
-				<li><a href="index.php?filter=comedy" id="Comedy" class="movieType">Comedy</a></li>
-				<li><a href="index.php?filter=family" id="Family" class="movieType">Family</a></li>
-				<li><a href="index.php?filter=horror" id="Horror" class="movieType">Horror</a></li>
-				<li><a href="index.php">All</a></li>
+				<li><a id="1" class="movieType" href="index.php?filter=action">Action</a></li>
+				<li><a id="2" class="movieType" href="index.php?filter=comedy">Comedy</a></li>
+				<li><a id="3" class="movieType" href="index.php?filter=family">Family</a></li>
+				<li><a  id="4" class="movieType" href="index.php?filter=horror">Horror</a></li>
+				<li><a id="5" href="index.php">All</a></li>
 			</ul>
 		</div>
 	</section>
@@ -67,9 +85,9 @@ include('includes/nav.php');
 			</video>
 		</div>
 
-		<div class="col-md-12">
+		<div class="col-md-12" id="addCommentContainer">
 			<h3>Post A Comment:</h3>
-			<form action="index.php" method="post" id="commentBox">
+			<form action="" method="post" id="commentBox">
 				<div class="form-group">
 				<label for="name">Name:</label>
 						<input type="text" class="form-control text-center" id="name" name="poster_name" placeholder="Enter Your Name">
@@ -85,14 +103,18 @@ include('includes/nav.php');
 
 </div>
 
-<br>
-<!--<video controls><source src=\"images/trailers/{$row['movies_trailer']}\" type=\"video/mp4\"></video>-->
+
+
+
+<section class="row text-center">
+<div class="col-md-12 text-center" id="bodyCon">
+	<h2>Click a movie to watch the trailer!</h2><br>
 <?php
 
 	if(!is_string($getMovies)){
 		while($row = mysqli_fetch_array($getMovies)){
 			echo "<div id=\"moviesCon\">
-			<img src=\"images/{$row['movies_thumb']}\" alt=\"{$row['movies_title']}\" id=\"{$row['movies_id']}\">
+			<a href=\"#\"><img src=\"images/{$row['movies_thumb']}\" alt=\"{$row['movies_title']}\" id=\"{$row['movies_id']}\"></a>
 				 <h2>{$row['movies_title']}</h2>
 				 <p>{$row['movies_year']}</p><br>
 				 </div>";
@@ -101,11 +123,13 @@ include('includes/nav.php');
 		echo "<p>{$getMovies}</p>";
 	}
 
-?>     
+?>
+</div>
+</section>
+
 
 <!-- jQuery -->
 <script src="js/jquery.js"></script>
-
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>
  <script src="js/main.js"></script>

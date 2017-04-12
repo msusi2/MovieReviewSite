@@ -4,6 +4,7 @@
 	$link->set_charset("utf8");
 
 
+
 	$vidNumber = $_GET["movies_id"];
 
 	$videoQuery = "SELECT * FROM tbl_movies WHERE movies_id = '$vidNumber'";
