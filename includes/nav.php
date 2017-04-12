@@ -13,7 +13,7 @@
                 </div>
             </div>
         </div>
-	</div>
+	</div>    <!--try to implement live search tutorial-->
 
 
   <!--<ul class="filterNav">

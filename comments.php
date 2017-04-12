@@ -28,7 +28,7 @@
     $sid = mysqli_real_escape_string($link,$_POST['sid']);
     $comment = mysqli_real_escape_string($link,$_POST['comment']);
 
-    $strSQL_Result  = "INSERT into tbl_comments(sid,comment) values(NULL,'$sid','$comment',CURRENT_TIMESTAMP)";
+    $strSQL_Result  = "INSERT into tbl_comments(sid,comment) values(NULL,'$sid','$comment',CURRENT_TIMESTAMP)";  //figure out why DB is not updating
 		exit;
 
 }
@@ -48,8 +48,8 @@ while($rowcomm = mysqli_fetch_array($strSQL_Comment))
 ?>
 
 <?php
-//echo "<script type=\"text/javascript\" src=\"jquery-1.8.0.min.js\"></script>";
-			echo "<div class=\"status\">$status</div>";
+//add in name and time
+		 echo "<div class=\"status\">$status</div>";
 				echo "<div id=\"commentbox\">";
 				echo "$commentshow";
 				echo "</div>";
