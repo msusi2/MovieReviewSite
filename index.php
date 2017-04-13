@@ -45,7 +45,7 @@
 	<h1 class="text-center">Choose A Category:</h1>
 
 	<section class="row" id="categoryCon">
-		<div class="col-md-12">
+		<div class="col-xs-12 col-md-12">
 			<ul class="list-unstyled" id="categories">
 				<li><a id="1" class="movieType" href="index.php?filter=action">Action</a></li>
 				<li><a id="2" class="movieType" href="index.php?filter=comedy">Comedy</a></li>
@@ -56,7 +56,7 @@
 		</div>
 	</section>
 
-	<div id="main" class="text-center">
+	<div id="main" class="text-center col-xs-12 col-md-8 col-md-offset-2">
 		<div id="content">
 			<p>Or search our database for your favourite movie:</p>
 				<input type="search" name="keyword" placeholder="Search Movies" id="searchbox">
@@ -68,7 +68,7 @@
 <div class="container text-center">
 
 	<section class="row" id="vidCon">
-		<div class="col-md-12">
+		<div class="col-xs-12 col-md-12">
 			<h2>Featured Trailer:</h2>
 			<video controls id="mainVideo">
 				<source src="images/trailers/meatballs.mp4" type="video/mp4">
@@ -78,8 +78,8 @@
 	</section>
 
 
-	<section class="row" id="postComment">
-		<div class="col-md-12 text-center">
+	<section class="row text-center" id="postComment">
+		<div class="col-xs-12 col-md-12 text-center">
 			<h3>Already watched these movies?</h3>
 		<?php
 			ini_set('display_errors',1);
@@ -113,7 +113,7 @@
 
 		<?php
 		//add in name and time
-				 echo "<div class=\"status text-center col-md-12\">$status</div><br>";
+				 echo "<span class=\"status\">$status</span><br>";
 						echo "<div id=\"commentbox\">";
 						echo "$commentshow";
 						echo "</div>";
@@ -130,7 +130,7 @@
 
 
 <section class="row text-center">
-<div class="col-md-12 text-center" id="bodyCon">
+<div class="col-xs-12 col-md-12 text-center" id="bodyCon">
 	<h2>Click a movie to watch the trailer!</h2><br>
 <?php
 

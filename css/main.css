@@ -6,9 +6,12 @@
   margin: 0 auto;
 }
 
+
 .status
 {
-    width:350px;
+  width: 100%;
+display: block;
+margin: 0 auto;
     font-size: 13px;
     line-height: 18px;
     font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
@@ -18,7 +21,9 @@
 }
 .commentarea
 {
-    width:350px;
+  width: 100%;
+display: block;
+margin: 0 auto;
     font-size: 13px;
     line-height: 18px;
     font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
@@ -33,17 +38,21 @@
 }
 #comment
 {
-    width: 357px;
+    width: 100%;
     font-size: 15px;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
     border: solid 1px #efefef;
+    display: block;
+    margin: 0 auto;
 
 }
 
 #commentbox {
-
+    width: 100%;
+  display: block;
+  margin: 0 auto;
 }
 
 
@@ -66,9 +75,15 @@ body {
   overflow-x: hidden;
 }
 
+#vidCon {
+
+}
 
 #mainVideo {
   border: solid 1px black;
+  width: 300px;
+  display: block;
+  margin: 0 auto;
 }
 
 #content {
