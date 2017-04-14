@@ -1,1 +1,117 @@
 /*CSS STYLES*/
+
+#postComment {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.status
+{
+  width: 100%;
+display: block;
+margin: 0 auto;
+    font-size: 13px;
+    line-height: 18px;
+    font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+.commentarea
+{
+  width: 100%;
+display: block;
+margin: 0 auto;
+    font-size: 13px;
+    line-height: 18px;
+    font-family: 'lucida grande',tahoma,verdana,arial,sans-serif;
+
+    background-color: hsl(0, 0%, 96%);
+    padding: 5px;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+#comment
+{
+    width: 100%;
+    font-size: 15px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    border: solid 1px #efefef;
+    display: block;
+    margin: 0 auto;
+
+}
+
+#commentbox {
+    width: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+
+#categories li {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.8em;
+  text-decoration: underline;
+  color: blue;
+}
+
+#categories {
+  text-align: center;
+  margin-top: 10px;
+}
+
+body {
+  display: block;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+#vidCon {
+
+}
+
+#mainVideo {
+  border: solid 1px black;
+  width: 300px;
+  display: block;
+  margin: 0 auto;
+}
+
+#content {
+    height: inherit;
+    width: 100%;
+    padding:20px;
+    box-sizing: border-box;
+}
+#content input {
+    width: 100%;
+    font-size:20px;
+    color: #424242;
+    padding:10px;
+    border-radius: 10px;
+    border: solid 1px #ccc;
+}
+#results{
+    width:100%;
+    display: none;
+    bordder-bottom:1px solid black;
+    bordder-left:1px solid black;
+    bordder-right:1px solid black;
+}
+#results #item {
+    box-sizing: border-box;
+    padding:10px;
+    font-size:18px;
+    width: 100%;
+    background: white;
+    border-bottom:1px solid #bdbdbd;
+}
