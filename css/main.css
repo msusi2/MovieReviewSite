@@ -6,7 +6,6 @@
   margin: 0 auto;
 }
 
-
 .status
 {
   width: 100%;
@@ -92,6 +91,7 @@ body {
     padding:20px;
     box-sizing: border-box;
 }
+
 #content input {
     width: 100%;
     font-size:20px;
@@ -100,6 +100,7 @@ body {
     border-radius: 10px;
     border: solid 1px #ccc;
 }
+
 #results{
     width:100%;
     display: none;
@@ -107,6 +108,7 @@ body {
     bordder-left:1px solid black;
     bordder-right:1px solid black;
 }
+
 #results #item {
     box-sizing: border-box;
     padding:10px;
