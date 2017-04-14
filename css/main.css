@@ -13,6 +13,10 @@ body p {
   text-align: left;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* Logo Container Styles */
 .logo {
   max-width: 8%;
@@ -30,13 +34,24 @@ body p {
   }
 }
 
-/* Category Container Styles */
 #categoryCon {
   margin-bottom: 60px;
 }
 
 #main {
   margin-bottom: 75px;
+}
+
+.btn-custom {
+  border-color: #efefef;
+  color: #efefef;
+  background: transparent;
+}
+
+.btn-custom:hover {
+  border-color: #efefef;
+  color: #829BD1;
+  background-color: #efefef;
 }
 
 #bodyCon p {

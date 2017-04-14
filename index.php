@@ -159,10 +159,6 @@
 	 </div>
  </section>
 
-
-
-
-
 <section class="row text-center">
 <div class="col-xs-12 col-md-12 text-center" id="bodyCon">
 	<h2>Click a movie to watch the trailer!</h2><br>
