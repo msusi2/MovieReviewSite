@@ -63,7 +63,7 @@
 
 	<div id="main" class="text-center col-xs-12 col-md-8 col-md-offset-2">
 		<div id="content">
-			<p class="searchInfo">Or search our database for your favourite movie:</p>
+			<p class="searchInfo text-center">Or search our database for your favourite movie:</p>
 				<input type="search" name="keyword" placeholder="Search Movies" id="searchbox">
 				<div id="results"></div>
 		</div>
