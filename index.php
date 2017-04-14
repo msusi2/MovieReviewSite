@@ -38,10 +38,6 @@
 </head>
 <body>
 
-<?php
-//include('includes/nav.php');
-?>
-
 	<h1 class="text-center">Choose A Category:</h1>
 
 	<section class="row" id="categoryCon">
@@ -99,21 +95,6 @@
 
 			</div><!--end media player-->
 	</section>
-
-
-
-
-
-
-	<!--<section class="row" id="vidCon">
-		<div class="col-xs-12 col-md-12">
-			<h2>Featured Trailer:</h2>
-			<video controls id="mainVideo">
-				<source src="images/trailers/meatballs.mp4" type="video/mp4">
-					Your browser does not support Video. Please consider using Chrome or Firefox.
-			</video>
-		</div>
-	</section> -->
 
 
 	<section class="row text-center" id="postComment">
