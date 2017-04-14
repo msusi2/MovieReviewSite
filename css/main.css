@@ -16,7 +16,9 @@ body p {
 /* Logo Container Styles */
 .logo {
   max-width: 8%;
+  margin: 0 auto;
 }
+
 
 @media (max-width: 767px) {
   .logo {
@@ -29,10 +31,32 @@ body p {
 }
 
 /* Category Container Styles */
+#categoryCon {
+  margin-bottom: 60px;
+}
+
+#main {
+  margin-bottom: 75px;
+}
+
+#bodyCon p {
+  text-align: center;
+}
+
+.vidCon {
+  background-color: #829BD1;
+  color: #efefef;
+}
+
+.vidCon {
+  margin-bottom: 60px;
+}
+
 #postComment {
   text-align: center;
   display: block;
   margin: 0 auto;
+  margin-bottom: 80px;
 }
 
 .status
@@ -98,7 +122,7 @@ margin: 0 auto;
 }
 
 .vidCon {
-  background-color: #3454D1;
+  /*background-color: #3454D1;*/
   color: #efefef;
 }
 

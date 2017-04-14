@@ -43,10 +43,8 @@
 //include('includes/nav.php');
 ?>
 
-	<section class="row" id="logoCon">
-		<div class="container">
-			<img src="images/logo.svg" class="img-responsive logo">
-		</div>
+	<section class="container" id="logoCon">
+		<img src="images/logo.svg" class="img-responsive logo">
 	</section>
 
 	<h1 class="text-center">Choose A Category:</h1>
@@ -65,41 +63,37 @@
 
 	<div id="main" class="text-center col-xs-12 col-md-8 col-md-offset-2">
 		<div id="content">
-			<p>Or search our database for your favourite movie:</p>
+			<p class="searchInfo">Or search our database for your favourite movie:</p>
 				<input type="search" name="keyword" placeholder="Search Movies" id="searchbox">
 				<div id="results"></div>
 		</div>
 	</div>
 
+<section class="row text-center vidCon">
+	<div class="container text-center">
+		<h2 class="hidden"> Media Player </h2>
+			<div id="mediaPlayer" class="col-xs-12 col-md-12">
 
-<div class="container text-center">
-
-
-	<section class="row text-center vidCon">
-	<h2 class="hidden"> Media Player </h2>
-
-		<div id="mediaPlayer" class="col-xs-12 col-md-12">
-
-			<video controls id="mainVideo">
-				<source src="images/trailers/meatballs.mp4" type="video/mp4">
-					Your browser does not support Video. Please consider using Chrome or Firefox.
-			</video>
+				<video controls id="mainVideo">
+					<source src="images/trailers/meatballs.mp4" type="video/mp4">
+						Your browser does not support Video. Please consider using Chrome or Firefox.
+				</video>
 
 					<div id='mediaControls' class="col-xs-12 col-md-12">
 
 					<progress id='progress-bar' max='100' value='0'>0% played</progress> <br>
 
-	<button id='play-pause-button' class='play btn' title='Play' onclick='togglePlayPause();'>Play</button>
+	<button id='play-pause-button' class='play btn btn-custom' title='Play' onclick='togglePlayPause();'>Play</button>
 
-	<button id='stop-button' class='stop btn' title='Stop' onclick='stopPlayer();'>Stop</button>
+	<button id='stop-button' class='stop btn btn-custom' title='Stop' onclick='stopPlayer();'>Stop</button>
 
-	<button id='volume-inc-button' class='volume-plus btn' title='Increase Volume' onclick='changeVolume("+");'>&Delta;</button>
+	<button id='volume-inc-button' class='volume-plus btn btn-custom' title='Increase Volume' onclick='changeVolume("+");'>&Delta;</button>
 
-	<button id='volume-dec-button' class='volume-minus btn' title='Decrease Volume' onclick='changeVolume("-");'>&nabla;</button>
+	<button id='volume-dec-button' class='volume-minus btn btn-custom' title='Decrease Volume' onclick='changeVolume("-");'>&nabla;</button>
 
-	<button id='mute-button' class='mute btn' title='Mute' onclick='toggleMute();'>Mute</button>
+	<button id='mute-button' class='mute btn btn-custom' title='Mute' onclick='toggleMute();'>Mute</button>
 
-	<button id='replay-button' class='replay btn' title='Replay' onclick='replayMedia();'>Replay</button>
+	<button id='replay-button' class='replay btn btn-custom' title='Replay' onclick='replayMedia();'>Replay</button>
 
 		</div> <!--end media controls-->
 
