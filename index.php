@@ -160,7 +160,7 @@
  </section>
 
 <section class="row text-center">
-<div class="col-xs-12 col-md-12 text-center" id="bodyCon">
+<div class="col-xs-4 col-md-4 text-center col-xs-offset-4 col-md-offset-4" id="bodyCon">
 	<h2>Click a movie to watch the trailer!</h2><br>
 <?php
 
