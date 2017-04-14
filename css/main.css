@@ -1,5 +1,34 @@
 /*CSS STYLES*/
 
+/* General Styles */
+body {
+  display: block;
+  margin: 0 auto;
+  overflow-x: hidden;
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body p {
+  text-align: left;
+}
+
+/* Logo Container Styles */
+.logo {
+  max-width: 8%;
+}
+
+@media (max-width: 767px) {
+  .logo {
+    width: 85%;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.25em;
+  }
+}
+
+/* Category Container Styles */
 #postComment {
   text-align: center;
   display: block;
@@ -68,14 +97,9 @@ margin: 0 auto;
   margin-top: 10px;
 }
 
-body {
-  display: block;
-  margin: 0 auto;
-  overflow-x: hidden;
-}
-
-#vidCon {
-
+.vidCon {
+  background-color: #3454D1;
+  color: #efefef;
 }
 
 #mainVideo {

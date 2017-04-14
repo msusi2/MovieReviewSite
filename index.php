@@ -43,6 +43,12 @@
 //include('includes/nav.php');
 ?>
 
+	<section class="row" id="logoCon">
+		<div class="container">
+			<img src="images/logo.svg" class="img-responsive logo">
+		</div>
+	</section>
+
 	<h1 class="text-center">Choose A Category:</h1>
 
 	<section class="row" id="categoryCon">
@@ -69,7 +75,7 @@
 <div class="container text-center">
 
 
-	<section class="row text-center">
+	<section class="row text-center vidCon">
 	<h2 class="hidden"> Media Player </h2>
 
 		<div id="mediaPlayer" class="col-xs-12 col-md-12">
@@ -83,28 +89,23 @@
 
 					<progress id='progress-bar' max='100' value='0'>0% played</progress> <br>
 
-	<button id='play-pause-button' class='play' title='Play' onclick='togglePlayPause();'>Play</button>
+	<button id='play-pause-button' class='play btn' title='Play' onclick='togglePlayPause();'>Play</button>
 
-	<button id='stop-button' class='stop' title='Stop' onclick='stopPlayer();'>Stop</button>
+	<button id='stop-button' class='stop btn' title='Stop' onclick='stopPlayer();'>Stop</button>
 
-	<button id='volume-inc-button' class='volume-plus' title='Increase Volume' onclick='changeVolume("+");'>&Delta;</button>
+	<button id='volume-inc-button' class='volume-plus btn' title='Increase Volume' onclick='changeVolume("+");'>&Delta;</button>
 
-	<button id='volume-dec-button' class='volume-minus' title='Decrease Volume' onclick='changeVolume("-");'>&nabla;</button>
+	<button id='volume-dec-button' class='volume-minus btn' title='Decrease Volume' onclick='changeVolume("-");'>&nabla;</button>
 
-	<button id='mute-button' class='mute' title='Mute' onclick='toggleMute();'>Mute</button>
+	<button id='mute-button' class='mute btn' title='Mute' onclick='toggleMute();'>Mute</button>
 
-	<button id='replay-button' class='replay' title='Replay' onclick='replayMedia();'>Replay</button>
+	<button id='replay-button' class='replay btn' title='Replay' onclick='replayMedia();'>Replay</button>
 
 		</div> <!--end media controls-->
 
 
 			</div><!--end media player-->
 	</section>
-
-
-
-
-
 
 	<!--<section class="row" id="vidCon">
 		<div class="col-xs-12 col-md-12">
